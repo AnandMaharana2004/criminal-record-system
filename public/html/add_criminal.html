@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Criminal Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0078FF;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border: 2px solid #0078FF;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #0078FF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+        }
+
+        button {
+            background-color: #0078FF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #005ecb;
+        }
+
+        footer {
+            background-color: #0078FF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Criminal Record System</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/add-criminal">Add Criminal</a>
+            <a href="/view-records">View Records</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Add Criminal Record</h2>
+            <form action="/add-criminal" method="POST">
+
+                <label for="caseNumber">Case Number :</label>
+                <input type="text" id="caseNumber" placeholder="Ex :- CR-3192" name="caseNumber" required>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="crimeType">Crime Type:</label>
+                <input type="text" id="crime" name="crimeType" required>
+
+                <label for="arrestDate">Arrest Date</label>
+                <input type="date" id="arrestDate" name="arrestDate" required>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                    <option value="under Investication">under Investication</option>
+                    <option value="on bill">on bill</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <button type="submit">Add Record</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Criminal Record System. Visit <a href="https://xhamstar.com" target="_blank">IT Services</a></p>
+    </footer>
+</body>
+</html>

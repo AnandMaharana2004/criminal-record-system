@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0078FF;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .profile-container {
+            background-color: #fff;
+            border: 2px solid #0078FF;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0078FF;
+            margin-bottom: 15px;
+        }
+        .profile-info p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0078FF;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #0078FF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Criminal Record System</h1>
+        <nav>
+          <a href="/">Dashboard</a>
+          <a href="add-criminal">Add Criminal</a>
+          <a href="view-records">View Records</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <div class="profile-header">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALwAyAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQMGAAECB//EAEUQAAEDAQQECgcGBAYDAQAAAAIAAQMEBRESIRMiMlEGJDFBQmFxcoGxFCMzUmKRwTRDU5Kh0RU1gvAHRFRzk+Gi0vFj/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAIREAAgICAwADAQEAAAAAAAAAAAECEQMxEiFBE1FhMgT/2gAMAwEAAhEDEQA/AHtsfZ4O+y6J+JS91cWx9npu+3kujfiknYphoLdvVR+CeWM3tfBJH2A8E+sX73w+qD0Bh7suJfs8/wDtupnUc7cXl62u/VLD+kJLRXKz7XL3381Cpav7RJ3381Cnex0chsCu1wGwKjqDLZHxQGjG3RDU1HRi+aBIv7vWV1VHTBrF4c6UFbdLjwkTD2qE7Z244paGRKAzUAVsM/spBLsdbcsSmX2FRPHPEUZDcXKLs6Xek25Q1ccMVGUkUkrCxsz3C3O96nZyHWHPqVgsuoGppx94dV1bHK+mcWfHTtE1Ti9HEiuYsnftQtTEMp4S+aMrG4uXYg5y18W67yVmc4QFLMICPpBYd2JSDSyfjH+Z0BBORAeIr8I3s97qWgqvSYiLLEL3PkgYL9FL8YvzOumpf/0L5uhnqMJ4S/Qb1tqsfi/Kg5JG4thHoo+9+qz0aP3v1Q/pkfxfJlp6+P3i+bIc19h4sKanj6vmsQb2jD73/kyxDmjcGcWv7Km6jZdSNxSRc2tsU3fZdG/FC67vNUN4GXez8E+sX73wSO72fayeWT954LPQrGTriZuLydo+bLtnXMvsi6yHzZCH9CPRWKn2pd5/NRKWf2pdr+aFqKiGDCMpax8jNdeiykYt6Om2EJVS6ICLpLs5xIBESvyS2sIiMh3JJOl0dGLG/RFX1MOMinG8s35HJ37GVdnrbPqzIYr3IfeFxdWqppMWLFcXglX8BHGWERYSyfJ1K00X4tMksmkHAMkRar73U9dXDSGQldyb0dSUfo0WHosqvwkxDaA4idwkbVuZ37UtD3SGtBa0NSerIzE3MTqy2HKPpeEdkxe9utedU1PRyBpKab1rZu17t+is3BarL+IRQyleWJmvTRVMlN3Fl6q24uXddLpmxfIU1qB4uXYljt6ou4y6WcSB6P73uoLguMkEtoU5Ezx6RjjuZmuZ70bQP62TrFcWSOGtqR6kDGWhSSS2hEQyEMZA4nhf5IeWkIZcOE5Mr78RJxN7250RTdLwSShY0ZUV30Iv9OT9rk66az5P9O3ydWe7+71l3Yp/CN8n4VtrMm/04f8AGsVkWLfCb5PwWWvsQd9ls24v8vNZa7alN328ls24v/U3mr+kw5uh4J5ZI+16rvqkd2vGrPwcbUnxZ5smqxWSOsd/Vf1j5o6WlEtnLqQk0RRhrc5ihGLUhHoqs22q/aMsY1Z1EuFhjbALlf4qwS7arlTTFLLJJiH1RvkTPy3vmpZbO3/IlbYQR4dGXSvza5CTnilIt77l1KeLD7zDe+aii1j1lnpI6I9Ns2T4dZL6+rkgpzKK4ZHbCLvzOt2lPJsiWEW5XSuVoy9rUX/qpV2UuwemrrQGiMq2qjlJnxNoxuwtu60NSVUds05apjJGT7Vy4qKeQtKMWxdezs+S7sISwbWsD5tci2Io+MDKxygl00GrJffzqx8F4SK1YiK/Vfm7VI5iW15JrwYiErQxDzDuWi232TyxUY9F1qYuKF2JE7ahdxlYp24oXdVeFvadxdc1RwRdgtn/AGuQfh+q1RNhtWUd7OtUP8wLuv5qUGw2r3v2SDBkzahLcTSEeqQsOFuVnXbit0ba5DuWMSNFN+IP5X/db0Un4jfl/wC1OsQAQ6EvxP0ZYplixhZbDalN3/otyN6oe83murXb7N31kjeqj77eaYYLdtePtVm4O/f+H1Vbu9bH2qy2A2tP4fVMhGOUFaHsg7/7o1CWhsD3vo6ZbFlop0ra6CraYpNYSZiZs2dskwlbXUZNqEpyVlccmmqKkTkIEUvSd35FoT2iyfLe65tEh0pR9buyCkkwhqlrJZROpS+zvQ6fEUlzjfyXpdXU1DTB7EcT817o2E8IdvWhLQptPrDJh6rmdQ0y6f0JSDFrUxEJe4RO7OspZ9fEIuBM9xi7ImGlKKX1tz3c7KaeKPVLpPk/Ig6ZnJvYTf0lY+Dc1PTGOnkwySNlk+9VUCIjER2b7vBMQpiqaukpxIh0hiL4XzuvTJ0SkuXTPUpG4uXdVdBteTu/VWU24v4KuA3rS7r+a7Mnh50PRbR/zAetn81PO2G0Iy3uyhpv5mP9TIi0Gw1EZbibzUigfdro2loyINIOBhJ+d3vQjNrirbZNPHNZkY4bnZ3zbtWq9AYmaiIvvI/yv+66ez5PxI/+N/8A2TWoo5ItnWHehxclFtoNAbWcXSmHwjf91iPWJeTMVO2P8t3/AKLqRvVB32WWw2vTd/6LZtqRd9l0mDbvWxqxWE2tP4fVV4ftAqxWJtT+H1TrQrG6DtF/VD2v5OjEHaWwPj5OigS0VSVtdQTvhikL4UTM2uSCtMsNIXxZJGPDaKjVx6Uy1sJM97OlFQ9QJ4SHW5ssnZO5dvFvUUoDIGsN93I6RS8Oqce7EMtbog1huubJlC1cJbRM1y6tWHCesJYd9zpPIA9H5pJJBjJjN6oSPa8VE54dbEluGTolq9iKjYukV3W6XiHlY0oj0uyL4Ruve58r8lcOCVmYav0whfCw3M5c5Pu8EdwCsenGxCmnpxP0ks8bM+o3J+t7qwFGImIxCIiOTMLMzK0cWpM55Z9xQabcX8FWgbjBdjq0G3F1WWbjZeKtl8ObH6Ko/wCax952/RFWvqgJIQnw2rF3/ojrYbi6iVDh2xJXOw24iPedUqF/VRl8LK4cHzxU5DudFMA1dkvq6HFiKDItyYLEXFMxXHYojwlzb1iY17x6UeRiZs3WLkkqYeil2y2vTd/6LZ7EXfZbthtem7y3LsQd5dRvAwW4wPYrFYra0vh9VX424wPYrFY7e17WTrQrGbIK0dkewvJGXpZbVVDTQ4ppBHVLlfPkRjsWWhDK2uSUWxKOiERzG92vv50Da9uyFiGmFxxPhHPWJ3yZRcJwksuWy4eUCp3AnzzNnvf53oZI8Y2y+HuSF0rruLYUTliWxXLfZ3yiQ1kQy7Qs/gk1ZZsOAiHVLtTyV0trHJCxOIiakw7RX+C2I4pRLoj1IshItpD1paCkMuS4XQuzKNHsXBQoy4P0eikE8Ite479yMkb1qov+HlbJBF6Piche5rr1eI546kxKImK57ia9rxfc7LtjK1R504tSYwf7OquTcb+atP8AlyVYkbjfi/kjl8Ex+iaq1bTj/wBxkxtVuKEl9othtAC+NvNM7RbiRKJU7oyxUkRfAytfBo/aD8LOqjZz8Uj6slZ+DT+tLrFZGLIuSfCN66QdbL92JcvKmlKkKBThpZSLe+9YtgOFYucJU7YOMZYMRC2F3d80NPaNKOj1iLCV+qzpFIZFtZ373Udy7vjQLH8nCIRPFFC7951PTcLayLFhjjYS6nyVbZh7VvCSZJIDVlhm4XWgWIRkEevJJ6ytqKs8U8hF3nQwiO0It23LmeTRRERJ+X4KoI1SOM9u0MJFi9Yx3dTZ+dytfD+k09hekDtU5sbP+jqpcB4yrrdkrCzjj1Ay+avlr1UM4FZpDpNKLjL1M/1UZ9xZWDqSZ55Ry4g3oi9BT00llWgdHOV5A/KzPcTczovEK8/R6u1ZqZxS2o6SPlfEoXhxLGAWh1MXSSu1xxU8g7xuT2ZsOqlNZFi6+q5ZAHdjNJYNhUkk5OM87szPfc4i/J43eaZWoU0RxV0UhCZ6pGJOz33ZOuLfpRtfg/HXUxO4i2Igd8xJuVvBQWbUTWhwcnhnEmnhHGOJtq7nbtXVE8+f6MqXhbaVMGjlIJh+Nvqylht+GWUSnjKPPO7NlWhPSxCQ9Jr71xi1+f5qj72TUUtFkrpY56gJIyYhvbNnTirbFRf0qjhKQ6wk7djpvDbk2i0M90gu1191zpeJqHllvxcuonVm4O/aB62dUyzLTpRxDKWDE97OTZMrhwdljKWMhkEhe+5xdnZJRmWeU8AESVO5EeIkVVyCRYUKI4Us3YCRYsZYlAeUX+K5d1ly6uXo0AhkPDq8m9c6UlqRsRrYthUbGNsZe8k9pVJT4o4uy9GWjU6IMI7Rblvg9SjUy4i335uyDdIZIsXBII7IsT0gtoRybeS3Zc0klQU0uJ5DK9yv50cNkzTxRxjc0QZ3b3dGU1lFB0f0UxhDwypsXo1YO0zaM3ZvFvqksJFg3+C9LaijqaeSGeNnEmuuJslTLfsKSyD0g3lTG+qXOL7nUckXtHXgyKuLFUQ4lMY4Qw9Lfco6Ydot/UiHbFqqB0iyZsSa8GOD/wDEqvTTjfTRPrN7z7lzTWdJXVYU8A3kb55cjc7r0GGOlsSzBHFhijbN35Sf93VcUb7ZDPk4qlsUW5FDQ2eQiIsMhsLAzNcqjUVM0Usc0Ubaj5iLc3OycWjXSWpViUurGGwF/J/2oSiH3f0XRZxFNp5SjqJachIYsbvFe3NzIq7XwkjbYosWGSIdYdzIGGTSBhLIm5HVNoWzY7eHkUijBi0pYsiZlwZljWoxOB/3crBwNrSitWKEi9VKbM7X8+9VkXRtlVGgtCCTcTP8nZNFJuhZ6PcpKYS1hyLtQcoEJ6w3fVMITGWICHkIWddEIk1xNf1KMoWAWM6xTz0PSiyLc7rFPizHkTsuZS1C612b4VHKOyPUu+QEQj/ea5nPRBiLmRLBhBJrUqMR4RURwGWQp5e9+ie2RYkghpoJDC/kud0ip4ylqBEcldbNpZhijIZCbxU5PsdIY2fWWhSAIyi0wt1XOycwW1GWEZBcC3O1yDpCqB1ZY2kHezZogo4Z9XDcW4mQCOo56WfCQzC2XJeyofDi1ZpbY/h8RX0kWF3ZmbMrr77/ABTiWgKPWgIg6r8lDUWbHXBhqYdZuQxbNks02uhsbUZWys02HBhU93bifkXc1nTUMvrbijd9UxZ7kxs6m/zBCxCL3ALtk7/9LmUXdHbzSjY1sx6ewbP9Iqc6uZrxjZ2xXczdSUVlRVWrLpJyuHogN9zMiho5KmoKacnKR+cn5EwipBHo3+C6V0qOGTt2xZS0Xw+Lqd6QUyGJcmCIBBWQCOLVVRr49FV6uQvmr5Ww4lV7YoiIMQ7Qve2SpFiSQtjPSBhLIuZ1AbYTwrqN1M4aUPiZUaAmQ3LuJ8NREXao3UkLcYi7UI7BLR7fwXkkksKjKXMnDldk2QNjCI2VSCOzoh8kckltix0aZ/G5aXSxAJ4sILVynLCIEo78K6sioEewWtl0QblXJyxGRJraJ4tlKZG/Zc7ZRIYWDBpagcW+9XukDZFVbg5FqYlbaQVB9lBxSCiJIRk2hZ/khqUfidkUwl+I/wAkTEGgIdnWHcS6p2EZdYbr+VnUjtJ7zP4LG0nSjYh7UwCSrs+nliMZRZhdtbJL6WhHAIiPqwa5r2TWVykpMOHDnyX8qymxSxeqFhuyvuzQa7BbqgEYBFYbxj0mbtdlhUpfeEZZ71rQRj0WWCROQ+9f4qMnU7iojZYwHOyS18eoSeyslNaKYDKNM3o1aQlkMj5dqLhMfmtW/Dh9YO0D3oazquGpw4cy3X8j7laLtEwqqi6Q+OSgEsMsZfFv6kcbj/8AEHUR4TjIdkn3pWY9r4I1o11hU0g7QDgJutk6dVT/AA5p5ILC0hbMp4ha/kZWtJsBy4/l3LF0sWMeMxNiiEivbcyHqpsOqipCEQ+EcmZKZSxGWLnV8krZooEqekXKgJPtAj7ubphVmIgPzdKKItPLiLpleoS0URdbCjw049astGyRWUPFxVgo1Ica0zaiIvFQ0+wpkTGnk90fmoZJZPe8GZTuy50YrIBxMxDotZ21250fE5YCHchawSI4yEeR0Zhw+KIASZpBPmfwUDkXSj+TouZ1ASxiAnH3bvBQyMiDZQSLBA5krrEzmdK619QkUBlXtt/VEqPYNQUXCMqcshkvy37lcLekwgXZvVT4PWaVXaBWlKWGOGRxBmfNy/ZvqqxJlwlUMetij6TawO7qU31N/goL8JjJ7r59iJj13gDUxz8H4o48WOF3GS9uflVnXnv+HdpaOeahImwya4X+8vQlJAMWLTMsRMeHW/JJSGMeF8L9JuRLo5MX7pnWyFUzlDNcQXJG5OAuLcjXsyTHkctnTlxKD6B7VqBiilkIrwEc2v5kHYRYtF2MorbLiE97M+o/L1cizg+7+r6k8iSPR7Mf1Qp9Ruq5ZzvgHsT6kd0lDD2nLURIuKXwO+BZK5DyE61GGbMscUoGokbpIiGpkfldlqMxsYYohLqUElVGOribJlJSm5UxO/NyJPTC01W+kzzRFDSl0p6uytOy7q7oxbAzMlE1XM5YcWS1BDzdDSuoYydxxO7rRk61BIpnSmufUJHzk6T2gb4CWAyicMJRGnl9cUZXZPvdV2w7dkobPGn0OL1jnjd991/knXCuljncjkxambMz5KPgtSwNRyyvEJSBIwiRNe91yrEmWZjEohIedr71BfqF/d6mLYQz5Fk7/NF0uzb6GVDVSQHFNEWExudn62XrnBq2o7ZohkxM04ZSA3M+9eQNAMdExCRX335plwTr6iktaJ4Dw43wE3M7Kdqx5QpWezO6xICrJye55HWJqI2f/9k=" alt="Criminal Profile Picture" class="profile-picture">
+                <h2>JHON DOE</h2>
+            </div>
+            <div class="profile-info">
+                <p><span class="highlight">Name:</span> John Doe</p>
+                <p><span class="highlight">Age:</span> 30</p>
+                <p><span class="highlight">Crime Type:</span> Theft</p>
+                <p><span class="highlight">Status:</span> Open</p>
+                <p><span class="highlight">Description:</span> Involved in multiple theft cases targeting jewelry stores in the city.</p>
+                <p><span class="highlight">Arrest Date:</span> 2025-03-10</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Criminal Record System. Visit <a href="https://www.xhamstar.com" target="_blank"> IT services</a></p>
+    </footer>
+</body>
+</html>
