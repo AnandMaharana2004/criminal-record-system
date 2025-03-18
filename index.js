@@ -160,7 +160,7 @@ app.post("/add-criminal", async (req, res) => {
 });
 
 app.get("/api/recent-criminals", async (req, res) => {
-    const lastCriminalRecords = criminals.slice(-10); // Get the last 10 records
+    const lastCriminalRecords = criminals.slice(-10).reverse(); // Get the last 10 records
     res.json({
         success: true,
         data: lastCriminalRecords
