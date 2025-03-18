@@ -1,8 +1,10 @@
 import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 import path from 'path';
 import { fileURLToPath } from 'url';
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
